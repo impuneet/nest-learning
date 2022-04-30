@@ -1,0 +1,97 @@
+{
+  "projectType": "application",
+  "root": "apps/iampuneet",
+  "sourceRoot": "apps/iampuneet/src",
+  "prefix": "nest-app",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/iampuneet",
+        "index": "apps/iampuneet/src/index.html",
+        "main": "apps/iampuneet/src/main.ts",
+        "polyfills": "apps/iampuneet/src/polyfills.ts",
+        "tsConfig": "apps/iampuneet/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/iampuneet/src/favicon.ico",
+          "apps/iampuneet/src/assets"
+        ],
+        "styles": ["apps/iampuneet/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/iampuneet/src/environments/environment.ts",
+              "with": "apps/iampuneet/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "iampuneet:build:production"
+        },
+        "development": {
+          "browserTarget": "iampuneet:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "proxyConfig": "apps/iampuneet/proxy.conf.json"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "iampuneet:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/iampuneet/**/*.ts",
+          "apps/iampuneet/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/iampuneet"],
+      "options": {
+        "jestConfig": "apps/iampuneet/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,28 @@
+{
+  "root": "apps/iampuneet-e2e",
+  "sourceRoot": "apps/iampuneet-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/iampuneet-e2e/cypress.json",
+        "devServerTarget": "iampuneet:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "iampuneet:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/iampuneet-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["iampuneet"]
+}
