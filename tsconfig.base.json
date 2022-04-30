@@ -15,12 +15,16 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nest-app/api/feature-config": [
-        "libs/api/feature-config/src/index.ts"
-      ],
       "@nest-app-hour-nestjs/api/utils-config": [
         "libs/api/utils-config/src/index.ts"
-      ]
+      ],
+      "@nest-app/api/data-access-article": [
+        "libs/api/data-access-article/src/index.ts"
+      ],
+      "@nest-app/api/feature-article": [
+        "libs/api/feature-article/src/index.ts"
+      ],
+      "@nest-app/api/feature-config": ["libs/api/feature-config/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
