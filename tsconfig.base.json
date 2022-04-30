@@ -21,6 +21,9 @@
       "@nest-app/api/data-access-article": [
         "libs/api/data-access-article/src/index.ts"
       ],
+      "@nest-app/api/data-access-dtos": [
+        "libs/api/data-access-dtos/src/index.ts"
+      ],
       "@nest-app/api/feature-article": [
         "libs/api/feature-article/src/index.ts"
       ],

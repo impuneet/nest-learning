@@ -3,6 +3,7 @@
   "projects": {
     "api": "apps/api",
     "api-data-access-article": "libs/api/data-access-article",
+    "api-data-access-dtos": "libs/api/data-access-dtos",
     "api-feature-article": "libs/api/feature-article",
     "iampuneet": "apps/iampuneet",
     "iampuneet-e2e": "apps/iampuneet-e2e"
