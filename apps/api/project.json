@@ -38,7 +38,7 @@
         "parallel": true,
         "commands": [
           "nx serve api",
-           "nx serve iampuneet"
+           "docker-compose up"
         ]
       }
     },
