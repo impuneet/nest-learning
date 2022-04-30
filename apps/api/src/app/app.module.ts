@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-
+import { FeatureConfigModule } from '@nest-app/api/feature-config';
 @Module({
-  imports: [],
+  imports: [ FeatureConfigModule ],
   controllers: [],
   providers: [],
 })
