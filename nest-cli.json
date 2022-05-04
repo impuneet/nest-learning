@@ -1,0 +1,25 @@
+{
+  "projects": {
+    "utils-config": {
+      "type": "library",
+      "root": "libs/api/utils-config",
+      "entryFile": "index",
+      "sourceRoot": "libs/api/utils-config/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/api/utils-config/tsconfig.lib.json"
+      }
+    },
+    "feature-config": {
+      "type": "library",
+      "root": "libs/api/feature-config",
+      "entryFile": "index",
+      "sourceRoot": "libs/api/feature-config/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/api/feature-config/tsconfig.lib.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true
+  }
+}

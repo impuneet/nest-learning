@@ -10,7 +10,18 @@
         "outputPath": "dist/apps/api",
         "main": "apps/api/src/main.ts",
         "tsConfig": "apps/api/tsconfig.app.json",
-        "assets": ["apps/api/src/assets"]
+        "assets": ["apps/api/src/assets"],
+        "tsPlugins": [
+          {
+            "name": "@nestjs/swagger/plugin",
+            "options": {
+              "dtoFileNameSuffix": [
+                ".dto.ts",
+                ".model.ts"
+              ]
+            }
+          }
+        ]
       },
       "configurations": {
         "production": {
@@ -33,13 +44,10 @@
       }
     },
     "serve-all": {
-      "builder": "@nrwl/workspace:run-commands",
+      "executor": "@nrwl/workspace:run-commands",
       "options": {
         "parallel": true,
-        "commands": [
-          "nx serve api",
-           "nx serve iampuneet"
-        ]
+        "commands": ["nx serve api", "docker-compose up"]
       }
     },
     "lint": {
