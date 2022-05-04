@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/article/data-access-api",
+  "sourceRoot": "libs/article/data-access-api/src",
+  "prefix": "nest-app",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/article/data-access-api"],
+      "options": {
+        "jestConfig": "libs/article/data-access-api/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/article/data-access-api/**/*.ts",
+          "libs/article/data-access-api/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

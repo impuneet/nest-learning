@@ -5,6 +5,7 @@
     "api-data-access-article": "libs/api/data-access-article",
     "api-data-access-dtos": "libs/api/data-access-dtos",
     "api-feature-article": "libs/api/feature-article",
+    "article-data-access-api": "libs/article/data-access-api",
     "iampuneet": "apps/iampuneet",
     "iampuneet-e2e": "apps/iampuneet-e2e"
   }

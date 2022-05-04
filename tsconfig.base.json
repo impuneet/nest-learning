@@ -27,7 +27,10 @@
       "@nest-app/api/feature-article": [
         "libs/api/feature-article/src/index.ts"
       ],
-      "@nest-app/api/feature-config": ["libs/api/feature-config/src/index.ts"]
+      "@nest-app/api/feature-config": ["libs/api/feature-config/src/index.ts"],
+      "@nest-app/article/data-access-api": [
+        "libs/article/data-access-api/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

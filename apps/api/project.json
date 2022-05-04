@@ -33,13 +33,10 @@
       }
     },
     "serve-all": {
-      "builder": "@nrwl/workspace:run-commands",
+      "executor": "@nrwl/workspace:run-commands",
       "options": {
         "parallel": true,
-        "commands": [
-          "nx serve api",
-           "docker-compose up"
-        ]
+        "commands": ["nx serve api", "docker-compose up"]
       }
     },
     "lint": {
